@@ -1,5 +1,6 @@
 - name: Ping All  Servers
   hosts: roboshop_frontend
+  become: yes
   serial:
   - 1
   - 20%
