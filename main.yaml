@@ -1,8 +1,14 @@
 - name: Ping All  Servers
   hosts: roboshop_frontend
+  serial: 2
   tasks:
     - name: ping the servers 1
       ansible.builtin.ping:
 
     - name: ping the servers 2
-      ansible.builtin.ping:  
+      ansible.builtin.ping: 
+
+    - name: Install ngnix
+      ansible.builtin.yum:
+        name: nginx
+        state: present   
