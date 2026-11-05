@@ -1,0 +1,5 @@
+- name: Ping All  Servers
+  hosts: roboshop-frontend
+  tasks:
+    - name: ping the servers
+      ansible.builtin.ping:

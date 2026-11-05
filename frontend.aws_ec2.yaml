@@ -1,0 +1,13 @@
+plugin: amazon.aws.aws_ec2
+regions:
+  - us-east-1
+
+include_filters:
+  - instance-state-name: [ 'running' ]
+  - tag:Name: "roboshop-frontend"
+
+
+keyed_groups:
+  - key: tags.Name  
+    prefix: roboshop
+    separator: "-"  
