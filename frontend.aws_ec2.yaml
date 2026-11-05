@@ -6,8 +6,9 @@ include_filters:
   - instance-state-name: [ 'running' ]
   - tag:Name: "roboshop-frontend"
 
+key_makers:
+  - tags.Name
 
 keyed_groups:
-  - key: tags.Name  
-    prefix: roboshop
+  - key: tags.Name
     separator: "-"  
